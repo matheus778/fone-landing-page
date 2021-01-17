@@ -1,0 +1,180 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: robotoGoogle;
+}
+
+@font-face{
+  font-family: robotoGoogle;
+  src: url(/fonts/Roboto-Regular.ttf);
+}
+
+
+/* Header */
+
+header{
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul li {
+  padding-right: 20px;
+  list-style: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: black;
+  transition: 100ms;
+}
+
+header ul li a:hover {
+  text-decoration: none;
+  border-bottom: 3px solid #CA3B3A;
+}
+
+.icons-menu{
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.icons-menu:hover{
+  opacity: 0.5;
+}
+
+/* Main */
+main {
+width: 90%;
+margin: 0 auto;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+
+main img {
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+section{
+  line-height: 20px;
+}
+
+section h1 {
+  font-size: 2rem;
+  color: #CA3B3A;
+}
+
+section h2{
+  font-size: 17px;
+  line-height: 2px;
+  color:rgb(49, 48, 48);
+}
+
+section small{
+  font-weight: 600;
+  color:rgb(131, 125, 125);
+}
+
+.estrelas input[type=radio] {
+  display: none;
+}
+
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #CA3B3A;
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+.btn-add-carinho{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-add-carinho p{
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.btn-add-carinho button{
+  margin-left: 20px;
+  width: 150px;
+  height: 44px;
+  color: white;
+  border: none;
+  outline: none;
+  background-color: #CA3B3A;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 500ms;
+}
+
+.btn-add-carinho button:hover{
+  background-color: black;
+}
+
+/* footer */
+footer{
+  padding-top: 60px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer div {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.6;
+}
+
+footer div img {
+  margin-right: 10px;
+  width: 33px;
+}
+
+/* mobile responsive */
+@media(max-width:560px){
+  header img{
+    width: 50px;
+    height: 50px;
+  }
+
+  header ul{
+    display: none;
+  }
+
+  .icons-menu{
+    width: 30px;
+  }
+  main{
+   flex-wrap: wrap;
+  }
+
+  footer{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  footer div{
+    width: 80%;
+  }
+}
